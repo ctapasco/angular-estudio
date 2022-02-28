@@ -1,0 +1,22 @@
+<p>Ejemplo For</p>
+
+<div *ngIf="heroeBorrado; else noBorrado">
+    <h1>Heroe Borrado</h1>
+    <h3>{{heroeBorrado}}</h3>
+</div>
+
+<ng-template #noBorrado>
+    <h1>No Ha Borrado Nada</h1>
+</ng-template>
+
+<button (click)="borrarHeroe(0)">borrar heroe</button>
+<button (click)="agregarHeroe('HN')">Agregar heroe</button>
+
+<ul>
+    <li *ngFor="let heroe of heroes; let i=index">
+        {{i+1}}  - {{heroe}}
+    </li>
+</ul>
+
+
+
